@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <mat-card>
+  <form novalidate [formGroup]="forma">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Create list" formControlName="task">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="confirm()">Create</button>
+  </form>
+  </mat-card>
+</div>
+<ng-container *ngFor="let task of tasks">
+  <mat-card><span>
+    <i class="material-icons">
+      clear
+      </i>{{task}}</span></mat-card>
+  </ng-container>
+  <h1 align="center">Ліна Костенко</h1>

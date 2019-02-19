@@ -1,17 +1,22 @@
-<div class="wrapper">
-    <mat-card>
+<div [ngClass]="'wrapper'">
+  <mat-card [ngClass]="'wrapper-add'">
+    <p>Список справ на сьогодні</p>
+  </mat-card>
+</div>3
+<div [ngClass]="'header'">
+    <mat-card [ngClass]="'task-add'">
   <form novalidate [formGroup]="forma">
     <mat-form-field>
-      <input matInput type="text" placeholder="Create list" formControlName="task">
+      <input matInput [ngStyle]="{'margin-right':'20px'}" type="text" placeholder="Create list" formControlName="task">
     </mat-form-field>
-    <button mat-raised-button color="primary" (click)="confirm()">Create</button>
+    <button [ngClass]="'btn'" mat-raised-button color="primary" (click)="confirm()">Create</button>
   </form>
   </mat-card>
 </div>
-<ng-container *ngFor="let task of tasks">
-  <mat-card><span>
-    <i class="material-icons">
-      clear
-      </i>{{task}}</span></mat-card>
-  </ng-container>
-  <h1 align="center">Ліна Костенко</h1>
+    <ng-container style="margin:0px auto" [ngStyle]="{'width':'100%'}" *ngFor="let task of tasks; let i = index">
+        <mat-card [ngClass]="'new-task'" [ngStyle]="{'margin-top':'20px'}"><span>
+          <button color="warn" mat-icon-button (click)="deleteTask(i)">
+            <mat-icon>
+            clear
+          </mat-icon></button>{{task}}</span></mat-card>
+        </ng-container>

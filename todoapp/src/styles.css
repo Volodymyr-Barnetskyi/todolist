@@ -1,2 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding:0;
+    
+}
+.wrapper{
+    width: 100%;
+    display:flex;
+}
+.wrapper-add{
+    width: 50%;
+    justify-content: center;
+    margin: 0px auto;
+    background-color: #6600ff;
+}
+.wrapper-add p{
+    color:#fff;
+    font-weight: bolder;
+    text-align: center;
+}
+.header{
+    width: 100%;
+    display:flex;
+}
+.task-add {
+    width: 50%;
+    justify-content: center;
+    margin: 0px auto;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.btn{
+    max-height: 50px;
+}
+.new-task{
+    width:50%;
+    display: flex;
+    margin: 0px auto;
+}

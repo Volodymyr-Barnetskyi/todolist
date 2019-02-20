@@ -1,6 +1,7 @@
 <div [ngClass]="'wrapper'">
   <mat-card [ngClass]="'wrapper-add'">
     <p>Список справ на сьогодні</p>
+    <p>Кількість завдань {{tasks.length}}</p>
   </mat-card>
 </div>
 <div [ngClass]="'header'">
@@ -13,7 +14,7 @@
   </form>
   </mat-card>
 </div>
-    <ng-container style="margin:0px auto" [ngStyle]="{'width':'100%'}" *ngFor="let task of tasks; let i = index">
+    <ng-container #tut style="margin:0px auto" [ngStyle]="{'width':'100%'}" *ngFor="let task of tasks; let i = index">
         <mat-card [ngClass]="'new-task'" [ngStyle]="{'margin-top':'20px'}"><span>
           <button color="warn" mat-icon-button (click)="deleteTask(i)">
             <mat-icon>
